@@ -8,6 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+function Mudarestado(el) {
+    var display = document.getElementById(el).style.display;
+
+    if(display == "none")
+        document.getElementById(el).style.display = 'block';
+    else
+        document.getElementById(el).style.display = 'none';
+}
 
 </head>
 <body>
@@ -20,7 +28,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
 <!--botao -->
-      <li><a href="#" class=".btn" data-toggle="collapse" data-target="#demo">Page 1</a></li>
+      <li><a href="#" class=".btn" data-toggle="collapse" data-target="#demo" onclick="funcao()"> Page 1 </a></li>
 <!--botao -->      
       <li><a href="#">Page 2</a></li>
     </ul>
@@ -37,7 +45,7 @@
   </div>
 </nav>
 
-<div  class="container">
+<div id= "sla" class="container">
   <h3>Navbar Forms</h3>
   <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p>
   <p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front or behind it as a "help text".</p>
@@ -46,7 +54,11 @@
 
  <div id="demo" class="collapse">
     Lorem ipsum dolor sit amet, con
-
+<script>
+function funcao() {
+    document.getElementById("sla").innerHTML = "";
+}
+</script>
 </body>
 </html>
 
